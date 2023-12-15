@@ -34,22 +34,33 @@ fs.readFile(fileName, "utf8", (err, data) => {
         }
       }
     }
-    (boolr = true), (boolg = true), (boolb = true);
-    for (let a = 0; a < red.length; a++) {
-      if (red[a] > 12) boolr = false;
-    }
-    for (let b = 0; b < green.length; b++) {
-      if (green[b] > 13) boolg = false;
-    }
-    for (let c = 0; c < blue.length; c++) {
-      if (blue[c] > 14) boolb = false;
-    }
+    // (boolr = true), (boolg = true), (boolb = true);
+    // for (let a = 0; a < red.length; a++) {
+    //   if (red[a] > 12) boolr = false;
+    // }
+    // for (let b = 0; b < green.length; b++) {
+    //   if (green[b] > 13) boolg = false;
+    // }
+    // for (let c = 0; c < blue.length; c++) {
+    //   if (blue[c] > 14) boolb = false;
+    // }
 
-    if (boolr == true && boolg == true && boolb == true) {
-      let curLine = lines[line].split(" ");
-      let gameid = curLine[1].substring(0, curLine[1].length - 1);
-      sum += parseInt(gameid);
-    }
+    // if (boolr == true && boolg == true && boolb == true) {
+    //   let curLine = lines[line].split(" ");
+    //   let gameid = curLine[1].substring(0, curLine[1].length - 1);
+    //   sum += parseInt(gameid);
+    // }
+    red.sort((a, b) => a - b);
+    green.sort((a, b) => a - b);
+    blue.sort((a, b) => a - b);
+    console.log(red, green, blue);
+    // console.log(
+    //   red[red.length - 1],
+    //   green[green.length - 1],
+    //   blue[blue.length - 1]
+    // );
+    sum +=
+      red[red.length - 1] * green[green.length - 1] * blue[blue.length - 1];
   }
   console.log(sum);
 });

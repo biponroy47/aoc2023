@@ -1,6 +1,7 @@
 const fs = require("fs");
 
-const fileName = "input1.txt";
+//const fileName = "input1.txt";
+const fileName = "input1test.txt";
 
 fs.readFile(fileName, "utf8", (err, data) => {
   if (err) {
@@ -8,7 +9,6 @@ fs.readFile(fileName, "utf8", (err, data) => {
     return;
   }
   let input = data;
-  //let input = "1abc2\npqr3stu8vwx\na1b2c3d4e5f\ntreb7uchet";
   strings = input.split("\n");
   console.log(strings);
 
