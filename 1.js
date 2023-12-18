@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const fileName = "input1.txt";
+const fileName = "inputs/input1.txt";
 //const fileName = "input1test.txt";
 //const fileName = "input2test2.txt";
 

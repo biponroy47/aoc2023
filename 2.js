@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const fileName = "input2.txt";
+const fileName = "inputs/input2.txt";
 //const fileName = "input2test.txt";
 
 fs.readFile(fileName, "utf8", (err, data) => {
@@ -10,7 +10,7 @@ fs.readFile(fileName, "utf8", (err, data) => {
   }
   let input = data;
   lines = input.split("\n");
-  console.log(lines);
+  //console.log(lines);
 
   sum = 0;
 
@@ -53,7 +53,7 @@ fs.readFile(fileName, "utf8", (err, data) => {
     red.sort((a, b) => a - b);
     green.sort((a, b) => a - b);
     blue.sort((a, b) => a - b);
-    console.log(red, green, blue);
+    //console.log(red, green, blue);
     // console.log(
     //   red[red.length - 1],
     //   green[green.length - 1],
